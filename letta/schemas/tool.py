@@ -19,7 +19,7 @@ MCP_TOOL_METADATA_SCHEMA_WARNINGS = f"{MCP_TOOL_TAG_NAME_PREFIX}:SCHEMA_WARNINGS
 from letta.functions.functions import get_json_schema_from_module
 from letta.functions.mcp_client.types import MCPTool
 from letta.functions.schema_generator import generate_tool_schema_for_mcp
-from letta.log import get_logger
+from letta.log import get_loggerh
 from letta.schemas.enums import ToolType
 from letta.schemas.letta_base import LettaBase
 from letta.schemas.npm_requirement import NpmRequirement
@@ -202,7 +202,7 @@ class ToolUpdate(LettaBase):
     metadata_: Optional[Dict[str, Any]] = Field(None, description="A dictionary of additional metadata for the tool.")
     default_requires_approval: Optional[bool] = Field(None, description="Whether or not to require approval before executing this tool.")
     enable_parallel_execution: Optional[bool] = Field(
-        False, description="If set to True, then this tool will potentially be executed concurrently with other tools. Default False."
+        None, description="If set to True, then this tool will potentially be executed concurrently with other tools. If not set, the existing value is preserved on PATCH. Default False for new tools."
     )
     # name: Optional[str] = Field(None, description="The name of the tool (must match the JSON schema name and source code function name).")
 
