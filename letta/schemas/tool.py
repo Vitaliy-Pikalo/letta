@@ -19,7 +19,7 @@ MCP_TOOL_METADATA_SCHEMA_WARNINGS = f"{MCP_TOOL_TAG_NAME_PREFIX}:SCHEMA_WARNINGS
 from letta.functions.functions import get_json_schema_from_module
 from letta.functions.mcp_client.types import MCPTool
 from letta.functions.schema_generator import generate_tool_schema_for_mcp
-from letta.log import get_loggerh
+from letta.log import get_logger
 from letta.schemas.enums import ToolType
 from letta.schemas.letta_base import LettaBase
 from letta.schemas.npm_requirement import NpmRequirement
